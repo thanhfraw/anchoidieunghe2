@@ -27,8 +27,8 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${isScrolled
-        ? "bg-jigger-gold py-4" // Navbar background when scrolled
-        : "bg-[#111a1c] shadow-lg py-4" // Initial navbar style
+        ? "bg-transparent py-6" // Navbar background when scrolled
+        : "bg-transparent py-6" // Initial navbar style
         }`}
     >
       <div className="container flex justify-between items-center">
@@ -38,7 +38,7 @@ const Navbar = () => {
             <img
               src="/Logo Combination Mark (short).svg"
               alt="Logo"
-              className="object-contain filter invert brightness-0"
+              // className="object-contain filter invert brightness-0"
             />
           </div>
         </HashLink>
@@ -52,28 +52,28 @@ const Navbar = () => {
         </button>
 
         {/* Desktop menu links (hidden on small screens) */}
-        <div className="hidden md:flex space-x-8 pt-1">
+        <div className="font-bold text-sm hidden md:flex space-x-8 pt-1">
           <HashLink
             to="/#about"
-            className="text-jigger-cream hover:text-jigger-gold transition-colors uppercase"
+            className="text-black hover:text-jigger-gold transition-colors uppercase font-bold text-sm"
           >
             About
           </HashLink>
           <HashLink
             to="/#showtell"
-            className="text-jigger-cream hover:text-jigger-gold transition-colors uppercase"
+            className="text-black hover:text-jigger-gold transition-colors uppercase font-bold text-sm"
           >
             Menu & Gallery
           </HashLink>
           <HashLink
             to="/#reservations"
-            className="text-jigger-cream hover:text-jigger-gold transition-colors uppercase"
+            className="text-black hover:text-jigger-gold transition-colors uppercase font-bold text-sm"
           >
             Reservations
           </HashLink>
           <HashLink
             to="/#contact"
-            className="text-jigger-cream hover:text-jigger-gold transition-colors uppercase"
+            className="text-black hover:text-jigger-gold transition-colors uppercase font-bold text-sm"
           >
             Contact
           </HashLink>
