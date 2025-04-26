@@ -2,9 +2,10 @@ import FadeInSection from "./ui/FadeInSection";
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Grainy Background */}
+      <div className="absolute inset-0 grainy-texture z-0"></div> 
+      {/* Background color */}
       <div className="absolute inset-0 bg-[#e0ded8] z-10"></div>
-      <div className="absolute inset-0 bg-[url('/background.jpg')] bg-cover bg-center"></div>
 
       {/* Content */}
       <FadeInSection className="container relative z-20 text-center flex flex-col items-center gap-4 ">

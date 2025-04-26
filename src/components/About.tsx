@@ -12,8 +12,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="bg-[#e0ded8] py-20">
-      <FadeInSection className="container grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" className="relative bg-[#d4d2ca] py-20 overflow-hidden">
+      {/* Nội dung chính */}
+      <FadeInSection className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
         {/* IMAGE LEFT SIDE */}
         <div className="w-full h-full">
           <img
