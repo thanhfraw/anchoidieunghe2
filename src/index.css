@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import './styles/font.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: black; */
+  @apply bg-jigger-dark text-jigger-cream font-sans;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+@layer base {
+  :root {
+    --background: #333333;
+    /* jet */
+    --foreground: #747474;
+    /* dim-gray */
+    --card: #202020;
+    /* eerie-black */
+    --card-foreground: #9f9f9f;
+    /* cadet-gray */
+    --popover: #202020;
+    /* eerie-black */
+    --popover-foreground: #9f9f9f;
+    /* cadet-gray */
+    --primary: #333333;
+    /* jet */
+    --primary-foreground: #9f9f9f;
+    /* cadet-gray */
+    --secondary: #747474;
+    /* dim-gray */
+    --secondary-foreground: #202020;
+    /* eerie-black */
+    --muted: #747474;
+    /* dim-gray */
+    --muted-foreground: #9f9f9f;
+    /* cadet-gray */
+    --accent: #202020;
+    /* eerie-black */
+    --accent-foreground: #9f9f9f;
+    /* cadet-gray */
+    --destructive: #333333;
+    /* jet */
+    --destructive-foreground: #9f9f9f;
+    /* cadet-gray */
+    --border: #747474;
+    /* dim-gray */
+    --input: #747474;
+    /* dim-gray */
+    --ring: #202020;
+    /* eerie-black */
+  }
+
+  .dark {
+    --background: #202020;
+    /* eerie-black */
+    --foreground: #9f9f9f;
+    /* cadet-gray */
+    --card: #333333;
+    /* jet */
+    --card-foreground: #747474;
+    /* dim-gray */
+    --popover: #333333;
+    /* jet */
+    --popover-foreground: #747474;
+    /* dim-gray */
+    --primary: #9f9f9f;
+    /* cadet-gray */
+    --primary-foreground: #202020;
+    /* eerie-black */
+    --secondary: #747474;
+    /* dim-gray */
+    --secondary-foreground: #333333;
+    /* jet */
+    --muted: #747474;
+    /* dim-gray */
+    --muted-foreground: #333333;
+    /* jet */
+    --accent: #202020;
+    /* eerie-black */
+    --accent-foreground: #333333;
+    /* jet */
+    --destructive: #747474;
+    /* dim-gray */
+    --destructive-foreground: #333333;
+    /* jet */
+    --border: #202020;
+    /* eerie-black */
+    --input: #202020;
+    /* eerie-black */
+    --ring: #747474;
+    /* dim-gray */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+
+  }
+
+  body {
+    @apply bg-background text-foreground;
+
+  }
+
+}
