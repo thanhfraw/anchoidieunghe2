@@ -22,10 +22,10 @@ const Reservations = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (isSubmitting) return; 
+    if (isSubmitting) return;
 
     else if (isSubmitted) {
       alert("Your reservation request has already been submitted.");
@@ -78,7 +78,7 @@ const handleSubmit = (e: React.FormEvent) => {
   };
 
   return (
-    <section id="reservations" className="py-10 bg-jigger-dark">
+    <section id="reservations" className="py-10 bg-[#e0ded8]">
       <FadeInSection className="container">
         <h2 className="font-serif text-4xl text-jigger-gold mb-12 text-center">Make a Reservation</h2>
 
@@ -87,7 +87,7 @@ const handleSubmit = (e: React.FormEvent) => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="name" className="block text-jigger-cream mb-1">Full Name</label>
+                <label htmlFor="name" className="block text-black mb-1">Full Name</label>
                 <input
                   type="text"
                   id="name"
@@ -95,12 +95,12 @@ const handleSubmit = (e: React.FormEvent) => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-jigger-dark border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
+                  className="w-full bg-[#191919] border border-black px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-jigger-cream mb-1">Email</label>
+                <label htmlFor="email" className="block text-black mb-1">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -108,14 +108,14 @@ const handleSubmit = (e: React.FormEvent) => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-jigger-dark border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
+                  className="w-full bg-[#191919] border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
                 />
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="phone" className="block text-jigger-cream mb-1">Phone Number</label>
+                <label htmlFor="phone" className="block text-black mb-1">Phone Number</label>
                 <input
                   type="tel"
                   id="phone"
@@ -123,19 +123,19 @@ const handleSubmit = (e: React.FormEvent) => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full bg-jigger-dark border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
+                  className="w-full bg-[#191919] border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
                 />
               </div>
 
               <div>
-                <label htmlFor="guests" className="block text-jigger-cream mb-1">Number of Guests</label>
+                <label htmlFor="guests" className="block text-black mb-1">Number of Guests</label>
                 <select
                   id="guests"
                   name="guests"
                   value={formData.guests}
                   onChange={handleChange}
                   required
-                  className="w-full bg-jigger-dark border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
+                  className="w-full bg-[#191919] border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
                 >
                   {[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
                     <option key={num} value={num}>{num}</option>
@@ -146,14 +146,14 @@ const handleSubmit = (e: React.FormEvent) => {
 
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="time" className="block text-jigger-cream mb-1">Time</label>
+                <label htmlFor="time" className="block text-black mb-1">Time</label>
                 <select
                   id="time"
                   name="time"
                   value={formData.time}
                   onChange={handleChange}
                   required
-                  className="w-full bg-jigger-dark border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
+                  className="w-full bg-[#191919] border-jigger-gold/30 px-4 py-2 text-white focus:border-jigger-gold outline-none"
                 >
                   <option value="">Select a time</option>
                   <option value="18:00">6:00 PM</option>
@@ -170,21 +170,21 @@ const handleSubmit = (e: React.FormEvent) => {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-jigger-cream mb-1">Special Requests (Optional)</label>
+              <label htmlFor="message" className="block text-black mb-1">Special Requests (Optional)</label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full bg-jigger-dark border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
+                className="w-full bg-[#191919] border border-jigger-gold/30 px-4 py-2 text-jigger-cream focus:border-jigger-gold outline-none"
               ></textarea>
             </div>
 
             <div className="text-center">
               <button
                 type="submit"
-                className="px-8 py-3 bg-jigger-gold text-jigger-dark font-medium hover:bg-transparent hover:text-jigger-gold border border-jigger-gold transition-colors mt-10"
+                className="px-8 py-3 bg-[#191919] text-white font-medium hover:bg-transparent hover:text-jigger-gold border border-jigger-gold transition-colors mt-10"
               >
                 Submit Reservation
               </button>

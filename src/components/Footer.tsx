@@ -3,7 +3,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <FadeInSection className="w-full bg-jigger-dark">
+    <FadeInSection className="w-full bg-[#e0ded8]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Grid Container */}
         <div className="py-16 flex justify-evenly items-center flex-col gap-8 lg:flex-row">
@@ -14,9 +14,9 @@ const Footer = () => {
               <img
                 src="/Logo Combination Mark (short).svg"
                 alt="Logo"
-                className="object-contain filter invert brightness-0"
+                className="object-contain mb-5"
               />
-              <p className="text-jigger-cream/80 mt-4 text-sm">
+              <p className="text-[#191919]">
                 Crafting exceptional cocktail experiences since 2025.
               </p>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
         {/* Footer Bottom Section */}
         <div className="py-7 border-t border-gray-700">
           <div className="flex items-center justify-center">
-            <span className="text-gray-400 ">
+            <span className="text-[#191919] ">
               © {currentYear} Ăn Chơi Điệu Nghệ. All rights reserved.
             </span>
           </div>

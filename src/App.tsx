@@ -10,14 +10,13 @@ import ShowTell from "./components/ShowTell";
 import FullGalleryView from "./components/FullGalleryView";
 import EventDetail from "./components/EventDetail";
 
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -39,15 +38,21 @@ function App() {
       <div className="min-h-screen bg-jigger-dark">
         <Navbar />
         <Routes>
-          <Route path="/" element={<>
-            <Hero />
-            <About />
-            <ShowTell />
-            <Reservations />
-            <Contact />
-          </>} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <About />
+                <ShowTell />
+                <Reservations />
+                <Contact />
+              </>
+            }
+          />
           <Route path="/gallery" element={<FullGalleryView />} />
-          <Route path="/event/:eventId" element={<EventDetail />} /> {/* Dynamic route */}
+          <Route path="/event/:eventId" element={<EventDetail />} />{" "}
+          {/* Dynamic route */}
         </Routes>
         <Footer />
       </div>

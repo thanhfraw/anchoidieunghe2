@@ -2,20 +2,33 @@ import FadeInSection from "./ui/FadeInSection";
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background color */}
       <div className="absolute inset-0 bg-[#e0ded8] z-10"></div>
-      <div className="absolute inset-0 bg-[url('/background.jpg')] bg-cover bg-center"></div>
+
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center z-10"
+        style={{ backgroundImage: "url('/hero/hero-main.png')" }}
+      ></div>
 
       {/* Content */}
       <FadeInSection className="container relative z-20 text-center flex flex-col items-center gap-4 ">
-        <h1 className="font-serif text-4xl md:text-7xl lg:text-8xl text-black mb-1 leading-tight whitespace-nowrap">
+        {/* Head */}
+        <h1 className="
+          font-serif 
+          text-4xl md:text-7xl lg:text-8xl 
+          text-white shadow-text
+          mb-1 leading-tight whitespace-nowrap">
           ĂN CHƠI ĐIỆU NGHỆ
         </h1>
-        <p className="font-san font-light italic text-lg md:text-xl lg:text-2xl mb-4 text-black">
-          {/* <p className="font-sans text-sm md:text-3xl lg:text-4xl"> */}
+        {/* Paragraph */}
+        <p className="
+          font-san font-light italic 
+          text-lg md:text-xl lg:text-2xl mb-4 
+          text-white shadow-text">
           ăn chơi không hậu quả
-          {/* </p> */}
         </p>
+        {/* Button */}
         <a
           href="#reservations"
           className="inline-block px-8 py-3 
