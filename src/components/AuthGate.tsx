@@ -15,7 +15,7 @@ const AuthGate = ({ onAuthSuccess }: { onAuthSuccess: () => void }) => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="w-full max-w-sm rounded-lg bg-[#111a1c] text-jigger-cream p-6 md:p-8 space-y-4">
+      <div className="w-full max-w-sm rounded-lg bg-[#191919] text-jigger-cream p-6 md:p-8 space-y-4">
         {/* <h2 className="text-2xl font-serif text-center mb-4 text-jigger-gold">
           Enter Code
         </h2> */}
@@ -27,7 +27,7 @@ const AuthGate = ({ onAuthSuccess }: { onAuthSuccess: () => void }) => {
             type="text"
             value={code}
             onChange={(e) => setCode(e.target.value.toUpperCase())}
-            className="p-3 border border-jigger-gold bg-[#111a1c]
+            className="p-3 border border-jigger-gold bg-[#191919]
             text-white rounded-md w-full placeholder-current 
             focus:outline-none focus:ring-2 focus:ring-jigger-gold 
             focus:border-transparent transition duration-150 ease-in-out"

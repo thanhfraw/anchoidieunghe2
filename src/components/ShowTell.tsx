@@ -46,7 +46,7 @@ const ShowTell = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
-    <section id="showtell" className="py-10 bg-[#111a1c] z-10">
+    <section id="showtell" className="py-10 bg-[#191919] z-10">
       <FadeInSection className="container">
         <h2 className="font-serif text-4xl text-jigger-gold mb-4 text-center">
           Menu & Gallery
@@ -54,7 +54,7 @@ const ShowTell = () => {
 
         {!isAuthenticated ? (
           <div className="text-center  text-white">
-            <p className="font-bold font-sans text-2xl mt-10">
+            <p className="font-bold font-sans text-2xl mt-10 mb-2 shadow-text">
               Please enter the party code to view this section.
             </p>
             <AuthGate onAuthSuccess={() => setIsAuthenticated(true)} />

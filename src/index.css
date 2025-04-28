@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+@import './fonts.css';
 @import "./styles/font.css";
 
 @tailwind base;
@@ -118,35 +120,6 @@ html {
   }
 }
 
-@keyframes move-grain {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(100px, 100px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.grainy-texture {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-      circle at 50% 50%,
-      rgba(27, 27, 27, 0),
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 1)
-    ),
-    url("/noise.svg");
-    
-  background-repeat: repeat;
-  background-size: cover;
-  opacity: 0.5;
-  mix-blend-mode: overlay;
-  filter: contrast(150%) brightness(300%);
-  animation: move-grain 10s infinite alternate linear;
-  z-index: 500;
+.shadow-text {
+  text-shadow: white 1px 0 10px;
 }
